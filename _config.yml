@@ -1,104 +1,141 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+# html lang
+language: zh-CN
 
-# URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+# main menu navigation
+menu:
+  Home: index.html
+  Archives: archives
+  Tags: tags
+  Categories: categories
+  About: about
+  Github: https://github.com/stiekel
 
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
+social:
+  GitHub: https://github.com/stiekel
+  Weibo: http://weibo.com/sidcn
+  M: histkc@gmail.com
 
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ''
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
-syntax_highlighter: highlight.js
-highlight:
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
-prismjs:
-  preprocess: true
-  line_number: true
-  tab_replace: ''
+# homepage article list size, 0 to hide list in homepage
+homepageArticleCount: 3
 
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
-index_generator:
-  path: ''
-  per_page: 10
-  order_by: -date
+# Google analytics
+google_analytics: false
+# Baidu tongji
+baidu_analytics: false
+# Disqus
+disqus_shortname:
+# Uyan
+uyan_id:
+# jiaThis id
+# if you want to change the style of jiaThis, please go to chage the following file:
+# theme/random/layouts/includes/jiathis.swig
+jiaThis_uid: 
+jiathisConfig:
+  data_track_clickback: true
+  summary: ""
+  showClose: true
+  shortUrl: false
+  hideMore: false
 
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
+# Valine comments https://valine.js.org
+valine:
+  enable: false # set true if you want to use
+  appId: #your leancloud appId
+  appKey: #your leancloud appKey
+  guest_info: nick,mail,link #valine comment header info
+  placeholder: # valine comment input placeholder(like: Please leave your footprints )
+  avatar: robohash # gravatar style https://valine.js.org/avatar
+  pageSize: 10 # comment list page size
+  verify: false # valine verify code (true/false)
+  notify: true # valine mail notify (true/false) 
+  lang: en
+  visit_analytics: true
 
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
+# gitalk comments https://github.com/gitalk/gitalk
+gitalk:
+  enable: false
+  clientID: clientID
+  clientSecret: clientSecret
+  repo: gitalk-comments
+  owner: github-username
 
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+# Miscelaneous
+favicon: /hollow.ico
 
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/random.css
+- /css/vegas.min.css
+- /css/highlight-railscasts.css
+- /css/jquery.fancybox.css
+- /css/iconfont/iconfont.css
+- /css/jquery.fancybox-thumbs.css
+- /css/plyr.css
 
-# Include / Exclude file(s)
-## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
+# scripts loaded in the end of the body
+scripts:
+- /js/jquery-3.6.4.min.js
+- /js/vegas.min.js
+- /js/random.js
+- /js/highlight.pack.js
+- /js/jquery.mousewheel.pack.js
+- /js/jquery.fancybox.pack.js
+- /js/jquery.fancybox-thumbs.js
+- /js/plyr.js
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: landscape
+# ignore visitor statistics on special server, for example on you local computer or debugging server
+isIgnoreSpecialHostVisitor: true
+ignoreHostList:
+  - localhost
+  - 127.0.0.1
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+# if you want to turn off the background images, pleaase set this value as true
+turnoffBackgroundImage: 
+  # home page
+  index: false
+  # arcihve / categories / tags
+  post_list: false
+  # post and page
+  post: false
+# when you turn off backgrounds, you can set a background color.
+backgroundColor: 34495E
+ 
+backgroundImages:
+# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__
+# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__
+# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__
+# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__
+# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__
+
+vegasConfig:
+  # more about config http://vegas.jaysalvat.com/documentation/settings/
+  # animation: 'random'
+  # transition: 'swirlRight'
+  preload­Image: true
+  transition:
+    # - slideLeft2
+    # - slideRight2
+    # - zoomIn
+    # - swirLeft
+    # - swirRight
+    - flash
+    # - flash2
+  timer: true
+  delay: 10000
+  shuffle: true
+  count: 12
+
+unsplashConfig:
+  # more about config on https://unsplash.it/
+  # blur: true
+  gravity: 'center' # north, east, south, west, center
+  # greyscale: true
+
+avatar: https://avatars2.githubusercontent.com/u/2735087?s=60&u=775d4033139cae6b23c593bcf59fa433224ba4e3&v=4
+
+# do not like fancybox, set this as false, this will turn it off
+fancybox: true
+
+# set the visibility of hide button in left bottom.
+hideButtonVisibility: true
