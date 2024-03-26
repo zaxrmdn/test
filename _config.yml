@@ -1,141 +1,156 @@
+# Theme
+remote_theme: epidrome/cover-card@main
 
-# html lang
-language: zh-CN
+# Title and tag line
+title: 'Zakaria Ramadan'
+description: 'IT Trainer & Consultant | Sysadmin'
 
-# main menu navigation
-menu:
-  Home: index.html
-  Archives: archives
-  Tags: tags
-  Categories: categories
-  About: about
-  Github: https://github.com/stiekel
+# Images
+avatar: 'avatar.jpg'
+background: 'background.jpg'
+favicon: 'favicon.ico'
 
-social:
-  GitHub: https://github.com/stiekel
-  Weibo: http://weibo.com/sidcn
-  M: histkc@gmail.com
+# Online profiles
+#dribbble: 'mydribbble'
+facebook: 'zakariaramadhan.71'
+twitter: 'zaxrmdn'
+linkedin: 'zakaria-ramadan'
+instagram: 'zaxrmdn'
+#pinterest: 'mypinterest'
+#youtube: 'myyoutube'
+github-user: 'zaxrmdn'
+#gitlab-user: ''
+#codepen: ''
+#steam: ''
+#soundcloud: ''
+#lastfm: ''
+#stack-overflow: ''
+#reddit: ''
+#rubygems: ''
+medium:  'zakariaramadan'
+#tumblr: 'mytumblr'
+#weibo: 'myweibo'
+#vk: 'myvk'
+#blog_url: 'myblog.blog.com'
+#email: 'hello@example.com'
+#messenger: 'myfbchat'
 
-# homepage article list size, 0 to hide list in homepage
-homepageArticleCount: 3
+social-links-order: [github-user, facebook, twitter, instagram, tumblr, pinterest, linkedin, youtube, vk, weibo, dribbble, messenger, blog_url, email]
 
-# Google analytics
-google_analytics: false
-# Baidu tongji
-baidu_analytics: false
-# Disqus
-disqus_shortname:
-# Uyan
-uyan_id:
-# jiaThis id
-# if you want to change the style of jiaThis, please go to chage the following file:
-# theme/random/layouts/includes/jiathis.swig
-jiaThis_uid: 
-jiathisConfig:
-  data_track_clickback: true
-  summary: ""
-  showClose: true
-  shortUrl: false
-  hideMore: false
+# Yaml manifest of supported social links
+# Requirements:
+# `name`
+#     - plain-text name of the site (e.g. twitter)
+#     - **mandatory**
+# `url-pattern`
+#     - site URL pattern containing a placeholder string (e.g. twitter.com/__USERNAME__)
+#     - placeholder will be replaced by username or value specified in _config.yml (e.g. twitter.com/mytwitter)
+#     - **mandatory**
+# `url-scheme`
+#     - the hardcoded URI/URN url-scheme (e.g. https://)
+#     - can be one of: ['https://', 'http://', 'mailto:']
+#     - defaults to '//'
+#     - **optional**
+# `icon-class`
+#     - the font awesome icon class names
+#     - font-awesome free and supports `fas` (solid) and `fab` (brands) styles
+#     - defaults to `fab` style and uses value of `name` attribute (e.g. fab fa-2x fa-twitter)
+#     - **optional**
+social-links:
+  - name: facebook
+    url-pattern: facebook.com/__USERNAME__
+    icon-class: fab fa-2x fa-facebook-f
 
-# Valine comments https://valine.js.org
-valine:
-  enable: false # set true if you want to use
-  appId: #your leancloud appId
-  appKey: #your leancloud appKey
-  guest_info: nick,mail,link #valine comment header info
-  placeholder: # valine comment input placeholder(like: Please leave your footprints )
-  avatar: robohash # gravatar style https://valine.js.org/avatar
-  pageSize: 10 # comment list page size
-  verify: false # valine verify code (true/false)
-  notify: true # valine mail notify (true/false) 
-  lang: en
-  visit_analytics: true
+  - name: twitter
+    url-pattern: twitter.com/__USERNAME__
 
-# gitalk comments https://github.com/gitalk/gitalk
-gitalk:
-  enable: false
-  clientID: clientID
-  clientSecret: clientSecret
-  repo: gitalk-comments
-  owner: github-username
+  - name: linkedin
+    url-pattern: linkedin.com/in/__USERNAME__
 
-# Miscelaneous
-favicon: /hollow.ico
+  - name: google-plus
+    url-pattern: plus.google.com/+__USERNAME__
 
-# stylesheets loaded in the <head>
-stylesheets:
-- /css/random.css
-- /css/vegas.min.css
-- /css/highlight-railscasts.css
-- /css/jquery.fancybox.css
-- /css/iconfont/iconfont.css
-- /css/jquery.fancybox-thumbs.css
-- /css/plyr.css
+  - name: vk
+    url-pattern: vk.com/__USERNAME__
 
-# scripts loaded in the end of the body
-scripts:
-- /js/jquery-3.6.4.min.js
-- /js/vegas.min.js
-- /js/random.js
-- /js/highlight.pack.js
-- /js/jquery.mousewheel.pack.js
-- /js/jquery.fancybox.pack.js
-- /js/jquery.fancybox-thumbs.js
-- /js/plyr.js
+  - name: weibo
+    url-pattern: weibo.com/__USERNAME__
 
-# ignore visitor statistics on special server, for example on you local computer or debugging server
-isIgnoreSpecialHostVisitor: true
-ignoreHostList:
-  - localhost
-  - 127.0.0.1
+  - name: instagram
+    url-pattern: instagram.com/__USERNAME__
 
-# if you want to turn off the background images, pleaase set this value as true
-turnoffBackgroundImage: 
-  # home page
-  index: false
-  # arcihve / categories / tags
-  post_list: false
-  # post and page
-  post: false
-# when you turn off backgrounds, you can set a background color.
-backgroundColor: 34495E
- 
-backgroundImages:
-# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__
-# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__
-# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__
-# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__
-# - http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__
+  - name: flickr
+    url-pattern: flickr.com/__USERNAME__
 
-vegasConfig:
-  # more about config http://vegas.jaysalvat.com/documentation/settings/
-  # animation: 'random'
-  # transition: 'swirlRight'
-  preload­Image: true
-  transition:
-    # - slideLeft2
-    # - slideRight2
-    # - zoomIn
-    # - swirLeft
-    # - swirRight
-    - flash
-    # - flash2
-  timer: true
-  delay: 10000
-  shuffle: true
-  count: 12
+  - name: pinterest
+    url-pattern: pinterest.com/__USERNAME__
 
-unsplashConfig:
-  # more about config on https://unsplash.it/
-  # blur: true
-  gravity: 'center' # north, east, south, west, center
-  # greyscale: true
+  - name: github-user
+    url-pattern: github.com/__USERNAME__
+    icon-class: fab fa-2x fa-github
 
-avatar: https://avatars2.githubusercontent.com/u/2735087?s=60&u=775d4033139cae6b23c593bcf59fa433224ba4e3&v=4
+  - name: gitlab-user
+    url-pattern: gitlab.com/__USERNAME__
+    icon-class: fab fa-2x fa-gitlab
 
-# do not like fancybox, set this as false, this will turn it off
-fancybox: true
+  - name: codepen
+    url-pattern: codepen.com/__USERNAME__
 
-# set the visibility of hide button in left bottom.
-hideButtonVisibility: true
+  - name: stack-overflow
+    url-pattern: stackoverflow.com/users/__USERNAME__
+
+  - name: reddit
+    url-pattern: reddit.com/user/__USERNAME__
+
+  - name: rubygems
+    url-pattern: rubygems.org/profiles/__USERNAME__
+    icon-class: far fa-2x fa-gem
+
+  - name: steam
+    url-pattern: steamcommunity.com/id/__USERNAME__
+
+  - name: youtube
+    url-pattern: youtube.com/__USERNAME__
+
+  - name: vimeo
+    url-pattern: vimeo.com/__USERNAME__
+
+  - name: soundcloud
+    url-pattern: soundcloud.com/__USERNAME__
+
+  - name: lastfm
+    url-pattern: last.fm/user/__USERNAME__
+
+  - name: medium
+    url-pattern: medium.com/@__USERNAME__
+
+  - name: tumblr
+    url-pattern: __USERNAME__.tumblr.com
+
+  - name: dribbble
+    url-pattern: dribbble.com/__USERNAME__
+
+  - name: keybase
+    url-pattern: keybase.io/__USERNAME__
+
+  - name: messenger
+    url-pattern: m.me/__USERNAME__
+    icon-class: fab fa-2x fa-facebook-messenger
+
+  - name: telegram
+    url-pattern: telegram.me/__USERNAME__
+
+  - name: snapchat
+    url-pattern: snapchat.com/add/__USERNAME__
+
+  - name: quora
+    url-pattern: www.quora.com/profile/__USERNAME__
+
+  - name: blog_url
+    url-pattern: '__USERNAME__'
+    icon-class: fas fa-2x fa-blog
+
+  - name: email
+    url-scheme: 'mailto:'
+    url-pattern: '__USERNAME__'
+    icon-class: far fa-2x fa-envelope-open

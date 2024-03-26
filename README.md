@@ -1,282 +1,79 @@
-# hexo-theme-random
-A hexo theme with random fullscreen background image.
+# Cover Card landing page theme
 
-## Demo
+## Quick set-up
 
-* [Demo](https://env-wwufiyop-1252212664.tcloudbaseapp.com/random-demo/?latest)
+1. [Use this template](https://github.com/epidrome/cover-card/generate)
+2. Edit the `_config.yml` with your online presence accounts and upload a background and an avatar image
+3. Go to the `Settings` tab, then select `Pages` from the sidebar, and find (gh-pages branch) your new home page link
 
-## [中文文档](README.CN.md)
+## Dependencies
 
-If you
+This theme is based on [jekyll](https://jekyllrb.com/) and [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme). These dependencies are natively supported by [Github Pages](https://pages.github.com/), which should build and deploy your site as soon as you make any change to your files. The theme is also based on the icons from [Font Awesome](https://fontawesome.com/). 
 
-* prefer to use fullscreen picture as background image
-* do NOT like show article abstract in post list
-* do NOT like use paginations in post list
+## Motivation
 
-This theme seems to suit you.
+Create a cover page for your social media profiles, host it for free on Github Pages, and maintain it in minutes, not hours. 
 
-## Screenshot
+I understand that a jekyll theme without a blog might sound like a self contradiction, but jekyll has also motivated something even more useful than itself: seamless hosting with Github Pages. 
 
-![hexo theme random screenshot homepage ](http://i.imgur.com/6N7QVHp.png)
-![hexo theme random screenshot archive ](http://i.imgur.com/bfcRUbO.png)
-![hexo theme random screenshot detail ](http://i.imgur.com/nYiNCha.png)
-![hexo theme random screenshot user card ](http://i.imgur.com/g4y0Vce.png)
-![hexo theme random screenshot categories ](http://i.imgur.com/M662lrh.png)
-![hexo theme random screenshot tags cloud ](http://i.imgur.com/bkpds14.png)
-![hexo theme random screenshot tag list ](http://i.imgur.com/e1q6gIn.png)
-![hexo theme random screenshot code style ](http://i.imgur.com/wEBheiq.png)
+This theme takes advantage of both jekyll and Github Pages, in order to create something similar to [linktree](https://linktr.ee), [about.me](https://about.me/) and [carrd](https://carrd.co), but without the price tag.
 
-## Install
+In addition to the official demo link, here is one more [demo from my home page](https://github.com/epidrome/home).
 
-execute this command in blog root path:
+This theme is ideal for people or organizations who are busy enjoying their life or business and who want a simple business card for their online presence.
 
-```sh
-git clone https://github.com/stiekel/hexo-theme-random.git themes/random
-```
+Please keep this README file because it contains the credits at the end and it might become handy after you have completely forgoten the set-up instructions.
 
-modify the `theme` setting in hexo main config file `_config.yml` as following:
+## Design rationale
 
-```yml
-theme: random
-```
+The design rationale of this theme is to do less than other themes: "Less is more"
 
-## Avatar
+The majority (99%) of the availabe jekyll themes offers a blog, but I have never been able to keep blog content (or its technology) updated over time.
 
-You can config the avatar in hexo main config file or theme config file as following:
+Let's be honest with ourselves: How does an (abandoned) blog centered web site look to new visitors if we have not posted since two years ago?
 
-```yml
-avatar: http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg
-```
+## Make it yours
 
-## Nav links config
+[Fork this repository](https://github.com/epidrome/cover-card/fork) and edit the files to your liking: As a first step, you may want to replace the images and edit the `_config.yml` with your online profiles. You can test the result almost in real-time at the `Github Pages` section in the Settings tab (gh-pages branch).
 
-Nav links in homepage and the top of other pages, you can config it in theme config file `theme/random/_config.yml`:
+### Avatar or Logo
 
-```yml
-menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
-  About: /about
-```
+The avatar image should be square and at least 200 pixels. Chances are that you have a selfie somewhere in your media storage. If you are making a page for a business or product, then use a logo.
 
-In index page, the `Home` link will hide itself.
+### Background image sets the mood
 
-## Create tags list page and categories list page
+There is no aspect ratio requirement for the background image, but it should be big enough for contemporary (desktop, tablet, phone) computer displays and dark enough in order to work for the white foreground text and icons.
 
-Hexo do NOT create tags list page and categories list page in default, but Random theme provide those pages, you just need to create it.
+### Social profiles
 
-If you want to create tags list page, run this command in blog root path:
+Edit the `_config.yml` file with your social media profiles by adding the respective account name, according to the documentation and comments inside that file. You can delete or comment out the social media that you don't need. Since v04, you can also control the order of your social media accounts. Moreover, you can add new media accounts and choose the icon.
 
-```sh
-hexo new page tags
-```
+### Domain name
 
-this will create a folder and a markdown file `source/tags/index.md`, change the `type` value of thie file as following:
+Github Pages supports free custom domain names, so it is worth buying a domain name and fill it in `Custom domain` field at the settings. If you want to use the theme with you user page (ie. username.github.io), then delete (or rename) your `master branch` and rename your `gh-branch` to `master` [#13](https://github.com/epidrome/cover-card/issues/13)
 
-```yml
-title: Tags
-date: 2016-01-16 06:17:29
-type: "tags"
-comments: false
-```
+### Working example
 
-the same to create categories list page:
+In addition to the configuration file in this repository, you can also [inspect a modified example of the legacy configuration file](https://github.com/epidrome/home/tree/0f333b28688a7a2e5eb84df768c277a03848d228), which is using the *legacy version* of the theme. Moreover, you can inspect a [custom (icons, links) example of the *current version*](https://github.com/epidrome/home).
 
-```sh
-hexo new page categories
-```
+### Updates
 
-and modify the `source/categories/index.md` as following:
+Please note that the theme is currently in beta, so some updates at the [master branch](https://github.com/epidrome/cover-card/tree/master) might break your site. Don't panic! 
 
-```md
-title: Categories
-date: 2015-08-03 14:19:29
-type: "categories"
-comments: false
-```
+If you wish to keep your theme frozen and not receive updates, then you can [revert your remote_theme to the last known good configuration](https://github.com/benbalter/jekyll-remote-theme):
 
-## Social links config
+> You may also optionally specify a branch, tag, or commit to use by appending an @ and the Git ref (e.g., epidrome/cover-card@v0.3). If you don't specify a Git ref, the master branch will be used.
 
-In the homepage, and the user card when visitors click the avatar, there are some social site icon links, You can config the icons in theme config file `theme/random/_config.yml` as following:
-
-```yml
-social:
-  GitHub: https://github.com/stiekel
-  Coding.NET: https://coding.net/u/Stiekel
-  Twitter: https://twitter.com/SidCN
-  Weibo: http://weibo.com/sidcn
-  DouBan: http://www.douban.com/people/Stiekel/
-```
-
-It will replace text into icon automaticalcally, Random theme support to show icon of Facebook / Google Plus / Dribbble / LinkedIn / NPMjs / Youtube / Zhihu / Quora.
-
-If you need more, please create [issue](https://github.com/stiekel/hexo-theme-random/issues).
-
-## Add RSS Icon
-
-If you want add RSS icon to social links, please add the following code at the `social` section in config file:
-
-```yml
-social:
-  rss: http://chensd.com/feed
-```
-
-## Third party Service
-
-Random support [Google Analytics](https://www.google.com/analytics/) / [Baidu Tongji](http://tongji.baidu.com/web/welcome/login) / [Disqus](https://disqus.com/) / [Uyan](http://www.uyan.cc/) / [JiaThis](http://www.jiathis.com/) / [Valine](https://valine.js.org/en/index.html) / [gitalk](https://github.com/gitalk/gitalk), You can config these in theme config file or hexo main config file:
-
-```yml
-# Google analytics
-google_analytics:
-# Baidu tongji
-baidu_analytics:
-# Disqus
-disqus_shortname:
-# Uyan
-uyan_id:
-# jiaThis
-jiaThis_uid: 
-jiathisConfig:
-  data_track_clickback: true
-  summary: ""
-  showClose: true
-  shortUrl: false
-  hideMore: false
-valine:
-  enable: false # set true if you want to use
-  appId: #your leancloud appId
-  appKey: #your leancloud appKey
-  guest_info: nick,mail,link #valine comment header info
-  placeholder: # valine comment input placeholder(like: Please leave your footprints )
-  avatar: robohash # gravatar style https://valine.js.org/avatar
-  pageSize: 10 # comment list page size
-  verify: false # valine verify code (true/false)
-  notify: true # valine mail notify (true/false) 
-  lang: en
-  visit_analytics: true
-
-gitalk:
-  enable: false
-  clientID: clientID
-  clientSecret: clientSecret
-  repo: gitalk-comments
-  owner: github-username
-```
-
-Just add the key or code after the ':'.
-
-## Theme config
-
-The following settings is not prerequisite.
-
-### Show latest articles in homepage
-
-Homepage did NOT show latest article links by default, if you want show latest articles in homepage, you need to add `homepageArticleCount` in theme or site config, `0` to hide latest article links.
-
-```yml
-# show latest 3 articles in homepage
-homepageArticleCount: 3
-```
-
-### Background image source config
-
-The background image use [unsplash](https://source.unsplash.com/) as default, but you can use your custom pictures.
-
-If you use unsplash images, you can config the settings in theme config file `theme/random/_config.yml`: 
-
-```yml
-unsplashConfig:
-  # more about config on https://unsplash.it/
-  # blur: true
-  gravity: 'north' # north, east, south, west, center
-  # greyscale: true
-```
-
-if you want use your own pictures, change the following section:
-
-```yml
-backgroundImages:
-- http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__
-- http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__
-- http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__
-- http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__
-- http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__
-```
-
-`__width__` and `__height__` in URLs will replace with browser window size when show the picture, It's very useful when you image server support cut image into appointed size.
-
-### Vegas(background image player) config
-
-Random theme use [Vegas](http://vegas.jaysalvat.com/) to organize pictures, you can config it in following section of theme config file:
-
-```yml
-vegasConfig:
-  # more about config http://vegas.jaysalvat.com/documentation/settings/
-  # animation: 'random'
-  # transition: 'swirlRight'
-  preload­Image: true
-  transition:
-    - slideLeft2
-    - slideRight2
-    # - zoomIn
-    # - swirLeft
-    # - swirRight
-    # - flash
-    - flash2
-  timer: true
-  delay: 5000
-  shuffle: true
-  count: 28
-```
-
-### Do NOT use background images
-
-If you do NOT like the background iamges, you can turn it off, please add this option in you site config or theme config file:
-
-```yml
-turnoffBackgroundImage: 
-  # home page
-  index: false
-  # arcihve / categories / tags
-  post_list: false
-  # post and page
-  post: true
-```
-
-and you can set the background color with:
-
-```yml
-backgroundColor: D7CCC8
-```
-
-### Hide button
-
-There is a __Hide__ button on the left bottom of every page, all of the content except button itself will be hide while user click this button. If you want to hide this button, please change `hideButtonVisibility` to `false` in theme config or main config file:
-
-```yml
-hideButtonVisibility: false
-```
-
-### Ignore visitor statistics on special server
-
-When you are debugging or writting, you may do NOT like to send the visitor statistics to Google Analytics or Baidu Tongji, Just add the debugging server address to the following variables:
-
-```yml
-isIgnoreSpecialHostVisitor: true
-ignoreHostList:
-  - localhost
-  - 127.0.0.1
-```
-
-## Thanks
-
-* [Vegas](http://vegas.jaysalvat.com)
-* [iconfont](http://iconfont.cn/)
-* [generator-hexo-theme](https://github.com/tcrowe/generator-hexo-theme)
-* [plyr](https://plyr.io/)
-
-## Feedback
-
-[issue](https://github.com/stiekel/hexo-theme-random/issues).
+Please note that currently Github Pages seems to build your site only when you make a local change. This means that the theme might get updated but you will not receive the updated version unless you make a local change in your forked repository.
+
+You can always visit [releases](https://github.com/epidrome/cover-card/releases) for new features and check [issues](https://github.com/epidrome/cover-card/issues) for major bugs.
+
+### Expert options
+
+You can find and locally overide advanced options (e.g., font, image, and icon styles) for this theme in the documentation (readme) at the [master branch](https://github.com/epidrome/cover-card/tree/master).
+
+## Credits
+
+This page is based on the [cover-card jekyll remote theme](https://github.com/epidrome/cover-card/tree/master).
+
+Background photo by Anders Jildén and avatar photo by Ayo Ogunseinde, both on [Unsplash](https://unsplash.com/)
