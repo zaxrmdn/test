@@ -3,7 +3,6 @@ remote_theme: epidrome/cover-card@main
 plugins:
   - jekyll-include-cache
   - gemfile
-layout: default
 
 # Title and tag line
 title: 'Zakaria Ramadan'
