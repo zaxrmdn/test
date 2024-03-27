@@ -4,7 +4,6 @@ plugins:
   - jekyll-include-cache
   - gemfile
 layout: default
-
 # Title and tag line
 title: 'Zakaria Ramadan'
 description: 'IT Trainer & Consultant | Sysadmin'
