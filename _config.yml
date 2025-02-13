@@ -2,8 +2,8 @@
 remote_theme: epidrome/cover-card@main
 layout: default
 # Title and tag line
-title: 'Zakaria Ramadan'
-description: 'IT Trainer & Consultant | Sysadmin'
+title: 'Hello My name is Zakaria R'
+description: 'I am an IT professional with experience in system management, server administration, and network monitoring. I have a deep interest in Linux, Network Management Systems (NMS), and IT infrastructure optimization. Currently, I am actively developing training materials and webinars on operating systems, monitoring tools, and network management. I also have experience deploying WordPress with Nginx and MariaDB, as well as implementing various open-source tools to enhance operational efficiency.'
 
 # Images
 avatar: 'avatar.jpg'
